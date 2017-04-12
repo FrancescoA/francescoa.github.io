@@ -1,0 +1,47 @@
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
+body {
+  font-family: 'Cabin', sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+}
+.name {
+  font-weight: 700;
+  font-size: 4rem;
+}
+.description {
+  padding: 10px 0px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #7a7a7a;
+}
+.resume {
+  padding: 15px 0px;
+  text-align: center;
+}
+.resume:hover {
+  color: #d50000;
+  cursor: pointer;
+}
+.yelp {
+  color: #d32323;
+}
+.duke {
+  color: #001A57;
+}
+.milan {
+  color: green;
+}
+
+
+
