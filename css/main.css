@@ -17,17 +17,21 @@ a {
   background: white;
   box-shadow: 0px 3px 15px 0px rgba(0,0,0,.2);
 }
-
+.hello {
+  font-size: 4rem;
+  font-weight: 700;
+}
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 90%;
+  margin-top: 20px;
 }
 .name {
-  font-weight: 700;
-  font-size: 3.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
   text-align: center;
 }
 .description {
@@ -66,17 +70,20 @@ a {
   color: #7a7a7a;
 }
 .highlight {
-  font-weight: 400;
+  font-weight: 500;
+}
+.highlight:hover {
+  text-shadow: 0px 1px 1px rgba(0,0,0,.2);
 }
 .yelp {
-  color: rgba(211, 35, 35, 0.7);
+  color: rgba(211, 35, 35, 0.6);
 }
 .duke {
-  color: rgba(0, 26, 87, 0.7);
+  color: rgba(0, 26, 87, 0.6);
 }
 .milan {
-  color: rgba(0, 128, 0, 0.7);
+  color: rgba(0, 128, 0, 0.6);
 }
 .sf {
-  color: rgba(254, 202, 0, 0.7);
+  color: rgba(254, 202, 0, 0.6);
 }
