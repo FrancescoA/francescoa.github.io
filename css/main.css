@@ -13,10 +13,9 @@ a {
 .boxed {
   padding: 10px 15px;
   max-width: 90%;
-  border: 2px solid black;
   border-radius: 10px;
   background: white;
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px 0px rgba(0,0,0,.2);
 }
 
 .main {
@@ -47,22 +46,23 @@ a {
 }
 .links a {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 5px 25px;
   cursor: pointer;
 }
 .links a:hover {
-  text-shadow: 1px 1px 3px rgba(0,0,0,.2);
+  text-shadow: 0px 3px 2px rgba(0,0,0,.2);
 }
-.links div {
-  font-size: 1rem;
+.links i {
+  position: relative;
+  top: -3px;
 }
-.resume:hover {
+.resume i {
   color: #d32323;
 }
-.linkedin:hover {
+.linkedin i {
   color: #0077B5;
 }
-.github:hover {
+.github i {
   color: #7a7a7a;
 }
 .highlight {
