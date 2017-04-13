@@ -1,9 +1,8 @@
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
 body {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100vh;
   width: 100%;
-  background-image: url("../img/subtle_white_feathers.png");
 }
 a {
   text-decoration: none;
@@ -18,13 +17,13 @@ a {
 }
 .name {
   /*font-family: 'Cabin', sans-serif;*/
-  font-weight: 700;
+  font-weight: 800;
   font-size: 4rem;
   text-align: center;
 }
 .description {
   padding: 20px 0px;
-  font-weight: 400;
+  font-weight: 300;
   color: #515151;
   text-align: center;
 }
@@ -38,7 +37,7 @@ a {
 }
 .links a {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 5px 20px;
   cursor: pointer;
 }
 .links a:hover {
@@ -57,7 +56,7 @@ a {
   color: #7a7a7a;
 }
 .highlight {
-  font-weight: 500;
+  font-weight: 400;
 }
 .yelp {
   color: #d32323;
@@ -71,6 +70,3 @@ a {
 .sf {
   color: #feca00;
 }
-
-
-
