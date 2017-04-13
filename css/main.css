@@ -69,14 +69,14 @@ a {
   font-weight: 400;
 }
 .yelp {
-  color: #d32323;
+  color: rgba(211, 35, 35, 0.7);
 }
 .duke {
-  color: #001A57;
+  color: rgba(0, 26, 87, 0.7);
 }
 .milan {
-  color: green;
+  color: rgba(0, 128, 0, 0.7);
 }
 .sf {
-  color: #feca00;
+  color: rgba(254, 202, 0, 0.7);
 }
