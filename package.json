@@ -1,0 +1,26 @@
+{
+  "name": "francescoa.github.io",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/FrancescoA/francescoa.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancescoA/francescoa.github.io.git"
+  },
+  "author": "FrancescoA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancescoA/francescoa.github.io/issues"
+  },
+  "homepage": "https://github.com/FrancescoA/francescoa.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}
