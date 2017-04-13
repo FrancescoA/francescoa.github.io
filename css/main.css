@@ -1,8 +1,9 @@
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   height: 100vh;
   width: 100%;
+  background-image: url("../img/subtle_white_feathers.png");
 }
 a {
   text-decoration: none;
@@ -13,25 +14,50 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 80%;
+  height: 90%;
 }
 .name {
+  /*font-family: 'Cabin', sans-serif;*/
   font-weight: 700;
   font-size: 4rem;
-}
-.description {
-  padding: 10px 0px;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #7a7a7a;
-}
-.resume {
-  padding: 15px 0px;
   text-align: center;
 }
-.resume:hover {
-  color: #d50000;
+.description {
+  padding: 20px 0px;
+  font-weight: 400;
+  color: #515151;
+  text-align: center;
+}
+.description div {
+  padding: 3px 0px;
+  font-size: 1.5rem;
+}
+.links {
+  text-align: center;
+  padding-top: 15px;
+}
+.links a {
+  display: inline-block;
+  padding: 5px 15px;
   cursor: pointer;
+}
+.links a:hover {
+  text-shadow: 1px 1px 3px rgba(0,0,0,.2);
+}
+.links div {
+  font-size: 1rem;
+}
+.resume:hover {
+  color: #d32323;
+}
+.linkedin:hover {
+  color: #0077B5;
+}
+.github:hover {
+  color: #7a7a7a;
+}
+.highlight {
+  font-weight: 500;
 }
 .yelp {
   color: #d32323;
@@ -41,6 +67,9 @@ a {
 }
 .milan {
   color: green;
+}
+.sf {
+  color: #feca00;
 }
 
 
