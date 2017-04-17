@@ -73,7 +73,7 @@ a {
   font-weight: 500;
 }
 .highlight:hover {
-  text-shadow: 0px 1px 1px rgba(0,0,0,.2);
+  border-bottom: 2px dashed;
 }
 .yelp {
   color: rgba(211, 35, 35, 0.6);
