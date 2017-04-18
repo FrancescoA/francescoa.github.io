@@ -28,6 +28,8 @@ a {
   flex-direction: column;
   min-height: 90%;
   margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .name {
   font-weight: 500;
