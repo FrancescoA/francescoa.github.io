@@ -6,6 +6,7 @@ The code for [my personal site](http://francescoagosti.com/).
 
 ```bash
 npm install --global gulp-cli
+npm install
 ```
 and then 
 ```bash
