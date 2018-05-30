@@ -5,12 +5,11 @@ The code for [my personal site](http://francescoagosti.com/).
 ### Making changes
 
 ```bash
-npm install --global gulp-cli
-npm install
+yarn install
 ```
 and then 
 ```bash
-gulp prep-css
+yarn build
 ```
 
 If you've made CSS changes. 

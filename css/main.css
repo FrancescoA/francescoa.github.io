@@ -78,8 +78,8 @@ a {
 .highlight:hover {
   border-bottom: 2px dashed;
 }
-.yelp {
-  color: rgba(211, 35, 35, 0.6);
+.zero-x {
+  color: #000;
 }
 .duke {
   color: rgba(0, 26, 87, 0.6);
