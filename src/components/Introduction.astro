@@ -4,41 +4,45 @@
 
 
 <div class="wrapper">
-<div class="introduction">
+  <div class="introduction">
 
 
-  <div class="menu">
-    <p class="greeting">Ciao!🖐🏻</p>
-    <h1 class="name">Francesco</h1>
-    <h1 class="surname">Arata</h1>
-    <p id="subtitle"></p>
-    <div class="description">
-      <p>I still have to decide what to write here</p>
+    <div class="menu">
+
+      <div class="greeting">
+        <span id="hand">🖐🏼</span>
+        <span id="greeting" class="visible">High five!</span>
       </div>
-  </div>
 
-  <div class="links">
-
-    <div class="github">
-      <a href="https://github.com/francescoa" target="_blank" rel="noopener noreferrer">
-        <i class="icon fa fa-github"></i>
-      </a>
+      <h1 class="name">Francesco</h1>
+      <h1 class="surname">Arata</h1>
+      <p id="subtitle"></p>
+      <div class="description">
+        <p>I still have to decide what to write here</p>
+      </div>
     </div>
 
+    <div class="links">
 
-</div>
- <div class="stats">
+      <div class="github">
+        <a href="https://github.com/francescoa" target="_blank" rel="noopener noreferrer">
+          <i class="icon fa fa-github"></i>
+        </a>
+      </div>
+
+
+    </div>
+    <div class="stats">
       <div class="webpageSize">
-        <p>My 0.00 KB piece of Internet!</p>
+        <p>My 402 kB piece of Internet!</p>
       </div>
     </div>
-    </div>
+  </div>
 
 </div>
 
 
 <style>
-
   .wrapper {
     display: flex;
     justify-content: center;
@@ -64,7 +68,8 @@
     font-weight: 100;
   }
 
-  .name, .surname {
+  .name,
+  .surname {
     font-weight: 1200;
     font-size: 5rem;
     padding: 0;
@@ -110,38 +115,125 @@
 
   .links {
     display: flex;
-        font-size: 2rem;
+    font-size: 2rem;
     gap: 1.25rem;
     margin-top: 2rem;
   }
 
   .icon {
-        color: rgb(143, 143, 143);
+    color: rgb(143, 143, 143);
   }
 
-
-    @media (max-width: 800px){
-      .greeting, .description {
-        text-align: center;
-      }
+  #greeting {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
   }
 
+  #greeting.visible {
+    opacity: 1;
+  }
 
+  #greeting.chinese {
+    font-family:
+      "Microsoft YaHei",
+      "PingFang SC",
+      "Noto Sans CJK SC",
+      "Source Han Sans SC",
+      sans-serif;
+    font-weight: 500;
+  }
+
+  #hand {
+    display: inline-block;
+    cursor: grab;
+    margin-right: .75rem;
+    user-select: none;
+  }
 </style>
 
 <script>
+  // handle subtitles loop
 
-  let subtitle = document.getElementById("subtitle");
-  let subtitles = ["Math", "Data", "Languages", "Everything"];
+  const subtitle = document.getElementById("subtitle");
+  let subtitleIndex = 0;
+  const subtitles = [
+    "Math",
+    "Data",
+    "Languages",
+    "Everything"
+  ];
 
-  let index = 0;
 
   function changeSubtitle() {
-    subtitle.textContent = subtitles[index];
-    index = (index + 1) % subtitles.length;
+    if (!subtitle) return;
+
+    subtitle.textContent = subtitles[subtitleIndex];
+    subtitleIndex = (subtitleIndex + 1) % subtitles.length;
   }
 
-  setInterval(changeSubtitle, 1000);
-  changeSubtitle();
 
+  changeSubtitle();
+  setInterval(changeSubtitle, 1000);
+
+
+
+  // handle greetings loop
+
+  const greeting = document.getElementById("greeting");
+  const hand = document.getElementById("hand");
+
+  const chineseGreeting = "你好！"
+
+  const greetings = [
+    "Ciao!",
+    "Hi there!",
+    "Salut!",
+    "Hallo!",
+    chineseGreeting
+  ];
+
+  let greetingIndex = 0;
+  let hideTimer;
+
+  const visibleDuration = 500;
+
+  if (greeting && hand) {
+    hand.addEventListener("click", () => {
+      clearTimeout(hideTimer);
+
+      const isDisplayed = greeting.style.display !== "none";
+
+      const text = greetings[greetingIndex];
+
+      greeting.textContent = text;
+      greeting.classList.toggle("chinese", text === "你好！");
+
+      greetingIndex = (greetingIndex + 1) % greetings.length;
+
+      if (!isDisplayed) {
+        greeting.style.display = "inline-block";
+        greeting.classList.remove("visible");
+
+        void greeting.offsetWidth;
+        greeting.classList.add("visible");
+
+      } else {
+        greeting.classList.add("visible");
+      }
+
+      hideTimer = setTimeout(() => {
+        greeting.classList.remove("visible");
+      }, visibleDuration);
+    });
+
+    greeting.addEventListener("transitionend", event => {
+      if (
+        event.propertyName === "opacity" &&
+        !greeting.classList.contains("visible")
+      ) {
+        greeting.style.display = "none";
+      }
+    });
+  }
 </script>
