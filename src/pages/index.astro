@@ -1,118 +1,335 @@
 ---
+import Introduction from '../components/Introduction.astro';
+import Footer from '../components/Footer.astro';
+import { Font } from "astro:assets";
+
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <Font cssVariable="--font-inter" />
     <title>Francesco Arata</title>
   </head>
 
   <body>
 
-    <div class="stats">
-      <div class="webpageSize">
-        <p>My 0.00 KB corner of Internet</p>
-      </div>
+
+    <Introduction />
+
+        <div class="button">
+      <a href="#about">></a>
     </div>
 
-    <div class="introduction">
-      <p>Ciao!🖐️</p>
-      <h1>Francesco Arata</h1>
-      
-      <p id="subtitle"></p>
-      <p id="description">Di tutto un po'</p>
-      <div id="links">
-        <div class="github">
-          <a href="https://github.com/francescoa" target="_blank" rel="noopener noreferrer">
-            <img src="/github.svg" alt="GitHub" />
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <div class="resume">
-      <h2>Me in 10 seconds</h2>
-      <p></p>
-    </div>
+    <div class="wrapper">
+    <div class="info">
 
-    <div class="profilePicture">
-      <img src="" alt="Profile Picture" />
-    </div>
-
-    <div class="aboutMe">
-      <h2>About me</h2>
-      <p id="description"></p>
-    </div>
-
-    <div class="skills">
-
-      <div class="Tech">
-        <h2>Languages</h2>
-        <ul>
-          <li>HTML/CS/JS</li>
-          <li>Python</li>
-          <li>C++</li>
-          <li>Java</li>
-          <li>SQL</li>
-          <li>Git></li>
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul class="tech">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>TypeScript</li>
+            <li>Java</li>
+            <li>Git</li>
+            <li>HTML/CSS</li>
+            <li class="learning">ML</li>
         </ul>
-      </div>
 
-      <div class="languages">
-        <h3>(Human)</h3>
-        <h2>Languages</h2>
-        <ul>
-          <li>Italian</li>
-          <li>English</li>
-          <li>French</li>
-          <li>German</li>
-          <li>Chinese</li>
-        </ul>
-      </div>
+        <hr>
 
-      <div class="interests">
+          <ul class="languages">
+            <li>IT</li>
+            <li>EN</li>
+            <li>FR</li>
+            <li>DE</li>
+            <li class="learning">ZH</li>
+          </ul>
+
+          <hr>
+
+          <ul class="tools">
+            <li>Excel</li>
+          </ul>
+
+      </section>
+
+      <section class="interests">
         <h2>Interests</h2>
-        <ul>
+        <ul class="profession">
+          <li>Stochastics</li>
+          <li>Machine Learning</li>
+          <li>Quantitative Modeling</li>
+          <li>Data Analysis</li>
+          <li>Data Engineering</li>
+        </ul>
+
+        <hr>
+          
+<ul class="hobby">
           <li>Math</li>
-          <li>Languages & Historical Linguistics</li>
-          <li>Word Puzzles & Sudoku</li>
-          <li>Data & Algorithms</li>
+          <li>Languages</li>
+          <li>Historical Linguistics</li>
+          <li>Words & Sudoku</li>
+          <li>Cycletouring</li>
         </ul>
-      </div>
+      </section>
+            
 
-      <div class="experience">
-        <h2>Experience</h2>
-        <ul>
-          <li class="currentPosition">
-           <div>
-            Math Student
-           </div> 
-          </li>
-        </ul>
-      </div>
-
-      <div class="projects">
+      <section class="projects">
         <h2>Projects</h2>
-        <ul></ul>
-      </div>
+        <p class="loading">Loading...</p>
+      </section>
 
-      <div class="articles">
-        <h2>Posts</h2>
-        <ul></ul>
-      </div>
-
-      <div class="contact">
+      <section class="contact">
         <h2>Let's keep in touch!</h2>
           <div class="email">Email: francescoarata.me@gmail.com</div>
-          <div class="position">Milan, Italy</div>
-        </div>
+          <div class="position">📍 Milan, Italy</div>
+      </section>
+
+      <section class="about">
+        <div id="about"></div>
+          <h2>About me</h2>
+          <p class="loading">Loading...</p>
+      </section>
+
+            <section class="articles">
+          <h2>Articles</h2>
+          <p class="loading">Loading...</p>
+      </section>
+
       </div>
+</div>
+
+
+      <Footer />
 
   </body>
 
-  footer>
-    <p>© 2026 Francesco Arata</p>
-    <p>All rights reserved</p>
-    <p>Made with Astro & GitHub Pages</p>
+
 </html>
+
+<style>
+
+  .skills {
+    grid-area: skills;
+  }
+
+  .interests {
+    grid-area: interests;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .projects {
+    grid-area: projects;
+  }
+
+  .articles {
+    grid-area: articles;
+  }
+
+  body {
+    background-color: #030712;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+
+  section {
+    margin: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid #4f95ff56;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  }
+
+  section > h2 {
+    color: rgb(255, 208, 0);
+    margin-bottom: 1rem;
+    font-family: monospace;
+  }
+
+  @-webkit-keyframes infinite-rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  section li {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    min-height: 1.5rem;
+    line-height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: default;
+  }
+
+  section > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  section ul > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  section > h2 {
+    margin-bottom: 2.5rem;
+    text-decoration: underline;
+  }
+
+  li.learning::after {
+    content: "⚙️";
+    display: block;
+    font-size: 1.1rem;
+    position: absolute;
+    top: -0.45rem;
+    right: -0.6rem;
+    color: #21b9ff;
+    animation: infinite-rotation 2s linear infinite;
+  }
+
+  section hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc5e;
+    width: 40%;
+    padding: 0;
+  }
+
+
+
+  .info section > ul  li {
+    background-color: #4f95ff56;
+    text-align: center;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.25rem;
+  }
+
+  .info section > ul  li {
+    transition: background-color 0.3s;
+  }
+
+.info section > ul li:hover {
+    background-color: #104594;
+    transition: background-color 0.2s;
+  }
+
+  section > h2 {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .info {
+    width: auto;
+    display: grid;
+    grid-template-areas:
+      "about about contact"
+      "skills interests interests"
+      "projects projects articles";
+
+
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    row-gap: 7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%;
+
+  }
+
+  .projects, .contact, .about, .articles {
+    color: white;
+    font-family: monospace;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
+  }
+
+  .button {
+    position: fixed;
+    display: block;
+    background-color: white;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    border: none;
+  }
+
+  .button a {
+    display: block;
+    line-height: 3rem;
+    font-family: monospace;
+    text-align: center;
+  transform: rotate(90deg);
+  font-size: 1.5rem;
+  font-weight: 100;
+  }
+
+  @media (max-width: 800px){
+    .info{
+      row-gap: 3rem;
+      grid-template:
+        "about"
+        "contact"
+        "skills"
+        "interests"
+        "projects"
+        "articles";
+    }
+  }
+
+  </style>
+
+  <script>
+
+    let loadingTexts = document.getElementsByClassName("loading");
+    let dots = ["", ".", "..", "..."];
+    dots = dots.reverse()
+
+    let index = 0;
+
+    function animateLoadingDots() {
+      for (const text of loadingTexts) {
+        text.textContent = "Loading" + dots[index];
+        index = (index + 1) % dots.length;
+      }
+    }
+
+    setInterval(animateLoadingDots, 300);
+    animateLoadingDots();
+
+  </script>
