@@ -71,7 +71,7 @@
   .name,
   .surname {
     font-weight: 1200;
-    font-size: 5rem;
+    font-size: clamp(3.5rem, 6vw + 1rem, 5rem);
     padding: 0;
     margin: 0;
     text-align: left;
@@ -149,7 +149,9 @@
     cursor: grab;
     margin-right: .75rem;
     user-select: none;
+    font-size: 2rem;
   }
+
 </style>
 
 <script>

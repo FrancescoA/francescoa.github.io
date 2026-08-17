@@ -5,109 +5,119 @@ import { Font } from "astro:assets";
 ---
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap"
+    />
+    <Font cssVariable="--font-inter" />
+    <title>Francesco Arata</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap" />
-  <Font cssVariable="--font-inter" />
-  <title>Francesco Arata</title>
-</head>
+  <body>
+    <Introduction />
 
-<body>
-  <Introduction />
-
-  <div class="button">
-    <a href="#about">></a>
-  </div>
-
-  <div class="wrapper">
-    <div class="info">
-      <section class="skills">
-        <h2>Skills</h2>
-        <ul class="tech">
-          <li>Python</li>
-          <li>SQL</li>
-          <li>TypeScript</li>
-          <li>Java</li>
-          <li>JS</li>
-          <li>HTML/CSS</li>
-          <li class="learning">ML</li>
-        </ul>
-
-        <hr />
-
-        <ul class="languages">
-          <li>IT</li>
-          <li>EN</li>
-          <li>FR</li>
-          <li>DE</li>
-          <li class="learning">中</li>
-        </ul>
-
-        <hr />
-
-        <ul class="tools">
-          <li>Excel</li>
-          <li>Git</li>
-        </ul>
-      </section>
-
-      <section class="interests">
-        <h2>Interests</h2>
-        <ul class="profession">
-          <li>Stochastics</li>
-          <li>Machine Learning</li>
-          <li>Quantitative Modeling</li>
-          <li>Data Analysis</li>
-          <li>Data Engineering</li>
-        </ul>
-
-        <hr />
-
-        <ul class="hobby">
-          <li>Math</li>
-          <li>Languages</li>
-          <li>Historical Linguistics</li>
-          <li>Words</li>
-          <li>Sudoku</li>
-          <li>Cycletouring</li>
-        </ul>
-      </section>
-
-      <section class="projects">
-        <h2>Projects</h2>
-        <p class="loading">Loading...</p>
-      </section>
-
-      <section class="contact">
-        <h2>Let's keep in touch!</h2>
-        <div class="email">
-          <span class="email-tag">Email: </span>francescoarata.me@gmail.com
-        </div>
-        <div class="position">📍 Milan, Italy</div>
-      </section>
-
-      <section class="about">
-        <div id="about"></div>
-        <h2>About me</h2>
-        <p class="loading">Loading...</p>
-      </section>
-
-      <section class="articles">
-        <h2>Articles</h2>
-        <p class="loading">Loading...</p>
-      </section>
+    <div class="button">
+      <a href="#about">></a>
     </div>
-  </div>
 
-  <Footer />
-</body>
+    <div class="wrapper">
+      <div class="info">
+        <section class="skills">
+          <h2>Skills</h2>
+          <ul class="tech">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>TypeScript</li>
+            <li>Java</li>
+            <li>JS</li>
+            <li>HTML/CSS</li>
+            <!-- <li class="learning">C++</li> -->
+            <li class="learning">ML</li>
+          </ul>
 
+          <hr />
+
+          <ul class="languages">
+            <li>IT</li>
+            <li>EN</li>
+            <li>FR</li>
+            <li>DE</li>
+            <li class="learning">中</li>
+          </ul>
+
+          <hr />
+
+          <ul class="tools">
+            <li>Excel</li>
+            <li>Git</li>
+          </ul>
+        </section>
+
+        <section class="interests">
+          <h2>Interests</h2>
+          <ul class="profession">
+            <li>Stochastics</li>
+            <li>Machine Learning</li>
+            <li>Quantitative Modeling</li>
+            <li>Data Analysis</li>
+            <li>Data Engineering</li>
+          </ul>
+
+          <hr />
+
+          <ul class="hobby">
+            <li>Math</li>
+            <li>Languages</li>
+            <li>Historical Linguistics</li>
+            <li>Words</li>
+            <li>Sudoku</li>
+            <li>Food🍕</li>
+            <li>Cycletouring</li>
+          </ul>
+        </section>
+
+        <section class="projects">
+          <h2>Projects</h2>
+          <p class="loading">Loading...</p>
+        </section>
+
+        <section class="contact">
+          <h2>Let's keep in touch!</h2>
+          <div class="email">
+            <div class="email-tag">Email:</div>
+            <div>francescoarata.me@gmail.com</div>
+          </div>
+          <div class="position">📍 Milan, Italy</div>
+        </section>
+
+        <section class="about">
+          <div id="about"></div>
+          <h2>About me</h2>
+          <p class="loading">Loading...</p>
+        </section>
+
+        <section class="articles">
+          <h2>Articles</h2>
+          <p class="loading">Loading...</p>
+        </section>
+      </div>
+    </div>
+
+    <Footer />
+  </body>
 </html>
 
 <style>
@@ -152,7 +162,7 @@ import { Font } from "astro:assets";
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   }
 
-  section>h2 {
+  section > h2 {
     color: rgb(255, 208, 0);
     margin-bottom: 1rem;
     font-family: monospace;
@@ -181,18 +191,18 @@ import { Font } from "astro:assets";
     cursor: default;
   }
 
-  section>ul {
+  section > ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.3rem;
   }
 
-  section ul>li {
+  section ul > li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  section>h2 {
+  section > h2 {
     margin-bottom: 2.5rem;
     text-decoration: underline;
   }
@@ -217,23 +227,23 @@ import { Font } from "astro:assets";
     padding: 0;
   }
 
-  .info section>ul li {
+  .info section > ul li {
     background-color: #4f95ff56;
     text-align: center;
     padding: 0.4rem 0.7rem;
     border-radius: 0.25rem;
   }
 
-  .info section>ul li {
+  .info section > ul li {
     transition: background-color 0.3s;
   }
 
-  .info section>ul li:hover {
+  .info section > ul li:hover {
     background-color: #104594;
     transition: background-color 0.2s;
   }
 
-  section>h2 {
+  section > h2 {
     text-align: center;
     font-size: 1.25rem;
   }
@@ -242,9 +252,9 @@ import { Font } from "astro:assets";
     width: auto;
     display: grid;
     grid-template-areas:
-      "about about contact"
-      "skills interests interests"
-      "projects projects articles";
+      "about    about     contact"
+      "skills   interests interests"
+      "projects projects  articles";
 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
@@ -263,7 +273,9 @@ import { Font } from "astro:assets";
 
   .wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 10rem;
     margin-top: 3rem;
   }
@@ -301,7 +313,9 @@ import { Font } from "astro:assets";
 
   @media (max-width: 800px) {
     .info {
-      row-gap: 3rem;
+      width: auto;
+      padding: 0 1.75rem;
+      row-gap: 1rem;
       grid-template:
         "about"
         "contact"

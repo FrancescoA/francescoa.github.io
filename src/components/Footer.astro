@@ -3,17 +3,39 @@
 ---
 
 <footer>
-  <p>© 2026 Francesco Arata - All rights reserved</p>
-  <p>🚀 Built with Astro & GitHub Pages (by hand!)</p>
+  <p class="copyright">© 2026 Francesco Arata - All rights reserved</p>
+  <p class="frameworks">🚀 Built with Astro & GitHub Pages</p>
 </footer>
 
 <style>
-
   footer {
     text-align: center;
     padding: 1rem;
-    background-color: #222;
+    background-color: #222222;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
+  .copyright {
+  }
+
+  .frameworks {
+    font-family: monospace;
+    position: relative;
+    width: auto;
+  }
+
+  .frameworks::after {
+    content: "by hand!";
+    font-size: 0.5rem;
+    font-weight: lighter;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -1.5rem;
+    transform: rotate(45deg);
+  }
 </style>
