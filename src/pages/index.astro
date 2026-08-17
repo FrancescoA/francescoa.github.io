@@ -29,9 +29,7 @@ import { Font } from "astro:assets";
   <body>
     <Introduction />
 
-    <div class="button">
-      <a href="#about">></a>
-    </div>
+    <button id="button" class="button"> > </button>
 
     <div class="wrapper">
       <div class="info">
@@ -284,6 +282,7 @@ import { Font } from "astro:assets";
     position: fixed;
     display: block;
     background-color: white;
+    transform: rotate(90deg);
     bottom: 2rem;
     right: 2rem;
     width: 3rem;
@@ -291,16 +290,31 @@ import { Font } from "astro:assets";
     cursor: pointer;
     border-radius: 0.3rem;
     border: none;
+    opacity: 1;
+    visibility: visible;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s;
+    font-family: monospace;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
   }
 
+  .button.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px) rotate(90deg);
+  }
+
+  .info {
+    scroll-margin-top: 4rem;
+  }
   .button a {
     display: block;
     line-height: 3rem;
-    font-family: monospace;
-    text-align: center;
-    transform: rotate(90deg);
-    font-size: 1.5rem;
-    font-weight: 100;
   }
 
   .contact .email .email-tag {
@@ -343,4 +357,39 @@ import { Font } from "astro:assets";
 
   setInterval(animateLoadingDots, 300);
   animateLoadingDots();
+
+  // navigation buttonv
+
+  const scrollButton = document.getElementById("button");
+  const target = document.querySelector(".info");
+
+  if (scrollButton && target) {
+    scrollButton.addEventListener("click", () => {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+
+    function updateButtonVisibility() {
+      let targetPosition;
+      let targetReached;
+      if (target) {
+        targetPosition = target.getBoundingClientRect().top;
+        targetReached = targetPosition <= 100;
+      }
+
+      if (scrollButton) {
+        scrollButton.classList.toggle("hidden", targetReached);
+      }
+    }
+
+    window.addEventListener("scroll", updateButtonVisibility, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", updateButtonVisibility);
+
+    updateButtonVisibility();
+  }
 </script>
