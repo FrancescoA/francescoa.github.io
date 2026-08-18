@@ -2,13 +2,9 @@
 
 ---
 
-
 <div class="intro-wrapper">
   <div class="introduction">
-
-
     <div class="menu">
-
       <div class="greeting">
         <span id="hand">🖐🏼</span>
         <span id="greeting" class="visible">High five!</span>
@@ -23,14 +19,15 @@
     </div>
 
     <div class="links">
-
       <div class="github">
-        <a href="https://github.com/francescoa" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/francescoa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="icon fa fa-github"></i>
         </a>
       </div>
-
-
     </div>
     <div class="stats">
       <div class="webpageSize">
@@ -38,16 +35,17 @@
       </div>
     </div>
   </div>
-
 </div>
-
 
 <style>
   .intro-wrapper {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-  flex-direction: column;
-width: 100%;}
+
+    width: 100%;
+  }
 
   .introduction {
     display: flex;
@@ -59,7 +57,6 @@ width: 100%;}
     font-family: var(--font-inter);
     width: 60%;
   }
-
 
   .greeting {
     font-family: monospace;
@@ -113,7 +110,6 @@ width: 100%;}
     line-height: 1.5rem;
   }
 
-
   .links {
     display: flex;
     font-size: 2rem;
@@ -137,22 +133,18 @@ width: 100%;}
 
   #greeting.chinese {
     font-family:
-      "Microsoft YaHei",
-      "PingFang SC",
-      "Noto Sans CJK SC",
-      "Source Han Sans SC",
-      sans-serif;
+      "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC",
+      "Source Han Sans SC", sans-serif;
     font-weight: 500;
   }
 
   #hand {
     display: inline-block;
     cursor: grab;
-    margin-right: .75rem;
+    margin-right: 0.75rem;
     user-select: none;
     font-size: 2rem;
   }
-
 </style>
 
 <script>
@@ -160,13 +152,7 @@ width: 100%;}
 
   const subtitle = document.getElementById("subtitle");
   let subtitleIndex = 0;
-  const subtitles = [
-    "Math",
-    "Data",
-    "Languages",
-    "Everything"
-  ];
-
+  const subtitles = ["Math", "Data", "Languages", "Everything"];
 
   function changeSubtitle() {
     if (!subtitle) return;
@@ -175,26 +161,17 @@ width: 100%;}
     subtitleIndex = (subtitleIndex + 1) % subtitles.length;
   }
 
-
   changeSubtitle();
   setInterval(changeSubtitle, 1000);
-
-
 
   // handle greetings loop
 
   const greeting = document.getElementById("greeting");
   const hand = document.getElementById("hand");
 
-  const chineseGreeting = "你好！"
+  const chineseGreeting = "你好！";
 
-  const greetings = [
-    "Ciao!",
-    "Hi there!",
-    "Salut!",
-    "Hallo!",
-    chineseGreeting
-  ];
+  const greetings = ["Ciao!", "Hi there!", "Salut!", "Hallo!", chineseGreeting];
 
   let greetingIndex = 0;
   let hideTimer;
@@ -220,7 +197,6 @@ width: 100%;}
 
         void greeting.offsetWidth;
         greeting.classList.add("visible");
-
       } else {
         greeting.classList.add("visible");
       }
@@ -230,7 +206,7 @@ width: 100%;}
       }, visibleDuration);
     });
 
-    greeting.addEventListener("transitionend", event => {
+    greeting.addEventListener("transitionend", (event) => {
       if (
         event.propertyName === "opacity" &&
         !greeting.classList.contains("visible")

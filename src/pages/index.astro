@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import { Font } from "astro:assets";
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,6 +23,9 @@ import { Font } from "astro:assets";
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap"
     />
+    <link rel="icon" href="/letter-f-v2.png" />
+    <meta name="generator" content={Astro.generator} />
+
     <Font cssVariable="--font-inter" />
     <title>Francesco Arata</title>
   </head>
@@ -96,7 +100,7 @@ import { Font } from "astro:assets";
           <h2>Let's keep in touch!</h2>
           <div class="email">
             <div class="email-tag">Email:</div>
-            <div>francescoarata.me<wbr/>@gmail.com</div>
+            <div>francescoarata.me<wbr />@gmail.com</div>
           </div>
           <div class="position">📍 Milan, Italy</div>
         </section>
@@ -119,6 +123,23 @@ import { Font } from "astro:assets";
 </html>
 
 <style>
+  /* *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  } */
   .skills {
     grid-area: skills;
   }
@@ -257,11 +278,11 @@ import { Font } from "astro:assets";
     margin-inline: auto;
     display: grid;
     grid-template-areas:
-      "about     about about contact      contact"
-      "skills skills interests interests interests"
-      "projects projects  projects articles articles";
+      "about     about     about       contact     contact"
+      "skills    skills    interests   interests   interests"
+      "projects  projects  projects    articles    articles";
 
-    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 
     width: 50%;
   }
